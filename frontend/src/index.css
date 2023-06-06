@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Normal Native CSS
+ * SCSS
+ * inline CSS
+ * Component Libraries - Material UI, Base UI, Ant, Chakra
+ * Styled Components
+ * Tailwind CSS Framework
+ *     - CSS on the go (in the same file)
+ *     - reusability
+ *     - less bundle size
+ *     - flexible UI (customisable (major cons of material UI) )
+ *     - 
+ */
+
+/* .header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.nav-items {
+  margin-left: auto;
+}
+
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+}
+
+.logo {
+  width: 100px;
+  height: 100%;
+}
+
+.card {
+  width: 300px;
+  height: 364.15px;
+  border: 1px solid brown;
+  padding: 25px;
+  margin: 12px;
+  background-color: beige;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-btn {
+  margin: 5px;
+}
+.search-input {
+  width: 250px;
+  height: 20px;
+  margin-left: 13px;
+}
+
+.shimmer-card {
+  width: 300px;
+  height: 364.15px;
+  border: 1px solid brown;
+  padding: 25px;
+  margin: 12px;
+  background-color: lightgrey;
+}
+.menu {
+  display: flex;
+} */

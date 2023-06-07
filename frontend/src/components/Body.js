@@ -22,7 +22,7 @@ const Body = () => {
   async function getData() {
     // const data = await axios.get("localhost:3002/api/v1/restaurant/");
     const data = await fetch(
-      "https://c6a9-36-255-87-5.in.ngrok.io/api/v1/restaurant"
+      "https://2c75-36-255-87-7.in.ngrok.io/api/v1/restaurant"
     );
     const json = await data.json();
     console.log(json);

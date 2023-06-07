@@ -57,8 +57,8 @@ class ItemService {
 
   async getAllItems() {
     try {
-      const Items = await Items.findAll();
-      return restaurants;
+      const allItems = await Items.findAll();
+      return allItems;
     } catch (error) {
       console.log("Something went wrong in the service layer");
       throw { error };

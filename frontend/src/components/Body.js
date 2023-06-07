@@ -1,4 +1,4 @@
-import { restaurantList } from "../constants";
+import { restaurantList, RESTAURANT_API } from "../constants";
 import RestaurantCard from "./RestaurantCard";
 import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
@@ -12,13 +12,23 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchTxt, setSearchTxt] = useState(""); //to create state variables
-  // const [lat, setLat] = useState(0);
-  // const [long, setLong] = useState(0);
 
   useEffect(() => {
     // fetchLocation();
-    getRestaurants();
+    getData();
+    // getRestaurants();
   }, []);
+
+  async function getData() {
+    // const data = await axios.get("localhost:3002/api/v1/restaurant/");
+    const data = await fetch(
+      "https://c6a9-36-255-87-5.in.ngrok.io/api/v1/restaurant"
+    );
+    const json = await data.json();
+    console.log(json);
+    setAllRestaurants(json?.data);
+    setFilteredRestaurants(json?.data);
+  }
 
   async function fetchLocation() {
     await navigator.geolocation.getCurrentPosition((position) => {
@@ -68,6 +78,7 @@ const Body = () => {
             //need to filter the data
             //update the state - restaurants variable
             const updatedData = filterData(searchTxt, allRestaurants);
+            console.log(updatedData);
             setFilteredRestaurants(updatedData);
           }}
         >
@@ -78,17 +89,15 @@ const Body = () => {
         {filteredRestaurants?.length === 0 ? (
           <h1>No restaurant matches your search...:(</h1>
         ) : (
-          filteredRestaurants?.map((each) => (
-            <Link to={"restaurant/" + each.data.id} key={each.data.id}>
-              <RestaurantCard {...each.data} />
+          filteredRestaurants.map((each) => (
+            <Link
+              to={"restaurant/" + each.restaurantId}
+              key={each.restaurantId}
+            >
+              <RestaurantCard {...each} />
             </Link>
           ))
         )}
-
-        {/* <RestaurantCard {...restaurantList[0].data} />
-      <RestaurantCard {...restaurantList[1].data} />
-      <RestaurantCard {...restaurantList[3].data} />
-      <RestaurantCard {...restaurantList[4].data} /> */}
       </div>
     </>
   );

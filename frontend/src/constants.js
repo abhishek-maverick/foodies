@@ -1680,6 +1680,9 @@ export const restaurantList = [
     subtype: "basic",
   },
 ];
+
+export const RESTAURANT_API =
+  "https://c6a9-36-255-87-5.in.ngrok.io/api/v1/restaurant";
 export const IMG_CDN_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 

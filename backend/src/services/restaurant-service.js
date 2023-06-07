@@ -6,7 +6,6 @@ class RestaurantService {
       const restaurant = await Restaurant.create({
         name: data.name,
         ratings: data.ratings,
-        url: data.url,
         restaurantId: data.restaurantId,
       });
       return restaurant;

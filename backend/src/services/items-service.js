@@ -5,9 +5,9 @@ class ItemService {
     try {
       const Item = await Item.create({
         name: data.name,
+        restaurantId: data.restaurantId,
+        price: data.price,
         ratings: data.ratings,
-        url: data.url,
-        ItemId: data.ItemId,
       });
       return Item;
     } catch (error) {

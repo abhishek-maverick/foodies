@@ -1,9 +1,9 @@
-const { Item } = require("../models/index");
+const { Items } = require("../models/index");
 
 class ItemService {
   async create(data) {
     try {
-      const Item = await Item.create({
+      const Item = await Items.create({
         name: data.name,
         restaurantId: data.restaurantId,
         price: data.price,
@@ -18,7 +18,7 @@ class ItemService {
 
   async deleteItem(ItemId) {
     try {
-      await Item.destroy({
+      await Items.destroy({
         ItemId: ItemId,
       });
       return true;
@@ -30,7 +30,7 @@ class ItemService {
 
   async updateItem(ItemId) {
     try {
-      const Item = Item.update({
+      const Item = Items.update({
         data,
         where: {
           ItemId: ItemId,
@@ -45,7 +45,7 @@ class ItemService {
 
   async getItem(ItemId) {
     try {
-      const Item = await Item.findOne({
+      const Item = await Items.findAll({
         ItemId: ItemId,
       });
       return Item;
@@ -57,7 +57,7 @@ class ItemService {
 
   async getAllItems() {
     try {
-      const Items = await Restaurant.findAll();
+      const Items = await Items.findAll();
       return restaurants;
     } catch (error) {
       console.log("Something went wrong in the service layer");

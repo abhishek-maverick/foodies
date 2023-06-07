@@ -13,13 +13,6 @@ const setupAndStartServer = async () => {
   app.use("/api", apiRoutes);
   app.listen(PORT, async () => {
     console.log(`Server started on port ${PORT}`);
-    const repo = new ItemService();
-    await repo.create({
-      name: "Mix Veg Platter",
-      ratings: "4.5",
-      price: 593,
-      restaurantId: 229832,
-    });
 
     const DB_SYNC = false;
     if (DB_SYNC) {

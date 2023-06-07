@@ -37,9 +37,9 @@ const Header = () => {
           <li className="px-2">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-2">
+          {/* <li className="px-2">
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
           <li className="px-2">
             <Link to="/contact">Contact</Link>
           </li>

@@ -70,16 +70,16 @@ const appRouter = createBrowserRouter([
         element: <Body />,
       },
       ,
-      {
-        path: "/about",
-        element: <About />,
-        children: [
-          {
-            path: "profile", // => parentPath/{path}, don't have to give slash over here otherwise will be conisdered as localhost:1234/profile
-            element: <ProfileClass />,
-          },
-        ],
-      },
+      // {
+      //   path: "/about",
+      //   element: <About />,
+      //   children: [
+      //     {
+      //       path: "profile", // => parentPath/{path}, don't have to give slash over here otherwise will be conisdered as localhost:1234/profile
+      //       element: <ProfileClass />,
+      //     },
+      //   ],
+      // },
       {
         path: "/contact",
         element: <Contact />,

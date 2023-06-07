@@ -39,17 +39,22 @@ const RestaurantMenu = () => {
       </div>
       <div className="p-5">
         <h1>Menu</h1>
-        <ul tyle={{ disply: "flex" }}>
+        <ul className="flex flex-wrap">
           {restaurant.map((item) => (
             <>
               <li key={item.restaurantId}>
-                {item.name}{" "}
-                <button
-                  className="p-2 m-5 bg-green-100"
-                  onClick={() => addAddItem(item)}
-                >
-                  Add Item
-                </button>
+                <div className="w-56 h-28 p-2 m-2 shadow-lg bg-slate-200">
+                  {/* <h2 className="font-bold text-xl">{name}</h2>
+      <h3>{description}</h3>
+      <h4> Rupees: {price}</h4> */}
+                  {item.name} - Rs:- {item.price}
+                  <button
+                    className="p-2 m-5 bg-green-100"
+                    onClick={() => addAddItem(item)}
+                  >
+                    Add Item
+                  </button>
+                </div>
               </li>
             </>
           ))}

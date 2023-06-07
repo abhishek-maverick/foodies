@@ -1,12 +1,5 @@
 import { IMG_CDN_URL } from "../constants";
-const RestaurantCard = ({
-  url,
-  name,
-  ratings,
-  // lastMileTravelString,
-}) => {
-  // const { url, name, cuisines, lastMileTravelString } =
-  //   restaurant.data;
+const RestaurantCard = ({ url, name, ratings }) => {
   return (
     <div className="card w-72 p-6 m-[6px] shadow-lg shadow-pink-500  h-72 bg-pink-100">
       {console.log()}

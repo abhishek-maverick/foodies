@@ -10,12 +10,7 @@ class ProfileClass extends React.Component {
     console.log("Child - constructor called  " + props.name);
   }
 
-  //similar to useEffect()
   componentDidMount() {
-    // best place to make APIs calls
-    // this.setState({
-    //   count: this.state.count + 1,
-    // });
     console.log("Child - component did mount called   " + this.props.name);
   }
   render() {

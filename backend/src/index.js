@@ -4,7 +4,7 @@ const app = express();
 const { PORT } = require("./config/serverConfig");
 const apiRoutes = require("./routes/index");
 const db = require("./models/index");
-const RestaurantRepository = require("./repository/restaurant-repository");
+const RestaurantService = require("./services/restaurant-service");
 const { report } = require("./routes/index");
 
 const setupAndStartServer = () => {
@@ -13,12 +13,8 @@ const setupAndStartServer = () => {
   app.use("/api", apiRoutes);
   app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
-    const repo = new RestaurantRepository();
-    // repo.create({
-    //   restaurantId: 2,
-    //   name: "Fasoos",
-    //   url: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/pwseiymyffwvk2i7wwwm",
-    // });
+    const repo = new RestaurantService();
+
     const data = [
       {
         type: "restaurant",

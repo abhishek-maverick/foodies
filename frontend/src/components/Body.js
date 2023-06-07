@@ -34,6 +34,7 @@ const Body = () => {
     );
     const json = await data?.json();
     setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    console.log(allRestaurants);
     setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
   }
 

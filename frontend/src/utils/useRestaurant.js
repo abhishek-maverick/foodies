@@ -10,7 +10,7 @@ const useRestaurant = (resId) => {
 
   async function getRestaurantInfo() {
     const data = await fetch(
-      "https://2c75-36-255-87-7.in.ngrok.io/api/v1/item/"
+      "https://2b16-36-255-87-5.in.ngrok.io/api/v1/item/"
     );
     const json = await data.json();
     console.log(json);

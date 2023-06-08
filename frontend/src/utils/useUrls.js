@@ -9,7 +9,7 @@ const useUrls = (resId) => {
 
   async function getUrlInfo() {
     const data = await fetch(
-      `https://2c75-36-255-87-7.in.ngrok.io/api/v1/restaurant/${resId}`
+      `https://2b16-36-255-87-5.in.ngrok.io/api/v1/restaurant/${resId}`
     );
     const json = await data.json();
     setUrl(json?.data);
